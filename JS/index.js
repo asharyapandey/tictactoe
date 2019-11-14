@@ -44,37 +44,36 @@ function gameChecker(){
     let r3c3 = document.querySelector('.r3c3').innerText;
     
     if((r1c1 ==='X' && r1c2 ==='X' &&r1c3 ==='X') || (r1c1 ==='O' && r1c2 ==='O' && r1c3 ==='O')){
-        console.log("game1");
-        
+        endGame(r1c1);
     }
     else if ((r2c1 ==='X' && r2c2 ==='X' && r2c3 ==='X') || (r2c1 ==='O' && r2c2 ==='O' && r2c3 ==='O')){
-        console.log("game2");
+        endGame(r2c1);
     }
     else if ((r3c1 ==='X' && r3c2 ==='X' && r3c3 ==='X') || (r3c1 ==='O' && r3c2 ==='O' && r3c3 ==='O')){
-        console.log("game3");
+        endGame(r3c1);
     }
     else if ((r1c1 ==='X' && r2c1 ==='X' && r3c1 ==='X') || (r1c1 ==='O' && r2c1 ==='O' && r3c1 ==='O')){
-        console.log("game4");
+        endGame(r1c1);
     }
     else if ((r1c2 ==='X' && r2c2 ==='X' && r3c2 ==='X') || (r1c2 ==='O' && r2c2 ==='O' && r3c2 ==='O')){
-        console.log("game5");
+        endGame(r1c2);
     }
     else if ((r1c3 ==='X' && r2c3 ==='X' && r3c3 ==='X') || (r1c3 ==='O' && r2c3 ==='O' && r3c3 ==='O')){
-        console.log("game6");
+        endGame(r1c3);
     }
     else if ((r1c1 ==='X' && r2c2 ==='X' && r3c3 ==='X') || (r1c1 ==='O' && r2c2 ==='O' && r3c3 ==='O')){
-        console.log("game7");
+        endGame(r1c1);
     }
     else if ((r1c3 ==='X' && r2c2 ==='X' && r3c1 ==='X') || (r1c3 ==='O' && r2c2 ==='O' && r3c1 ==='O')){
-        console.log("game8");
+        endGame(r1c3);
     }
 }
 
-function endGame() {
-    
+function endGame(winner) {
+    endgame.style.display = "block";
+    endgame.firstElementChild.innerText = `And the Winner is ${winner}`;
 }
 
 btnPlayAgain.addEventListener("click", event =>{
-    //alert();
     location.reload();
 });
