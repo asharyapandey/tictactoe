@@ -3,3 +3,27 @@
     width: 100px;
     height: 100px;
 }
+body{
+    font: 'Century Gothic';
+    
+}
+.info{
+    display: flex;
+    font-size: 20px;
+}
+.p2{
+    margin-left:280px;
+}
+.endgame{
+    width: 90%;
+    height: 500px;
+    background-color: black;
+    opacity: 0.7;
+    text-align: center;
+    position: fixed;
+    color: white;
+    top: 0%;
+    bottom: 0%;
+    padding-top: 100px;
+    display: none;
+}
